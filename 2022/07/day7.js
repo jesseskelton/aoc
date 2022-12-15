@@ -106,7 +106,6 @@ function findDirectory(directoryName, search) {
 }
 
 function findallDirectoriesUnderSize(size, searchTree, matchedDirectories) {
-    //console.log('searching for ' + searchTree.name)
     let totalSize = searchTree.files
                                 .map(a => a.size)
                                 .reduce((a, b) => a + b, 0)
@@ -162,12 +161,4 @@ function findSizeOfSmallest(diskSpaceAvailable,
     }
 
     return currentSmallest
-}
-
-function cleanUpSpace() {
-
-
-    // find smallest directory I can delete that will allow us to have 
-    // enough space 
-
 }
